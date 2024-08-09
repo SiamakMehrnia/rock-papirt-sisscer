@@ -1,4 +1,4 @@
-var choices = ["rock", "paper", "scissor"];
+const choices = ["rock", "paper", "scissor"];
 
 function computerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
@@ -8,11 +8,25 @@ function playerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// var playerselection = playerChoice();
-var playerselection = "rock" ;
-var computerselection = computerChoice();
+// const playerselection = playerChoice();
+var playerselection = "paper";
+const computerselection = computerChoice();
 
-function playround(playerselection, computerselection) {
+// function playRound(playerSelection, computerSelection) {
+//   if (playerSelection === computerSelection) {
+//     console.log("It's a tie!");
+//   } else if (
+//     (playerSelection === "rock" && computerSelection === "scissor") ||
+//     (playerSelection === "paper" && computerSelection === "rock") ||
+//     (playerSelection === "scissor" && computerSelection === "paper")
+//   ) {
+//     console.log("You win!");
+//   } else {
+//     console.log("You lose!");
+//   }
+// }
+
+function playRound(playerselection, computerselection) {
   if (playerselection === computerselection) {
     console.log("It's a tie!");
   } else if (playerselection === "rock") {
@@ -36,6 +50,6 @@ function playround(playerselection, computerselection) {
   }
 }
 
-playround(playerselection, computerselection);
+playRound(playerselection, computerselection);
 console.log("Player selection: " + playerselection);
 console.log("Computer selection: " + computerselection);
